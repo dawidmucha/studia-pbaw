@@ -10,6 +10,12 @@
 	</head>
 
 	<body>
+		<div>
+			<a href="<?php print(_APP_ROOT); ?>/app/security/logout.php">
+				Log out
+			</a>
+		</div>
+
 		<form>
 			<label>
 				Loan amount: <br />
