@@ -33,6 +33,7 @@
 
 		<?php
 			//wyświetlanie listy błędów
+
 			if(isset($messages)) {
 				if(count($messages) > 0) {
 					echo '<ol>';
@@ -52,4 +53,3 @@
 		?>		
 	</body>
 </html>
-
