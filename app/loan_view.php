@@ -28,7 +28,7 @@
 				<input type="text" id="upfront" name="upfront" value="<?php print($upfront); ?>" />
 			</label> <br />
 
-			<input type="submit" value="Oblicz ratę kredytu" />
+			<input type="submit" value="Calculate" />
 		</form>
 
 		<?php

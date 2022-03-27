@@ -43,7 +43,7 @@
 		if(!is_numeric($amount) && $amount > 0) {
 			$messages [] = 'Loan amount isn\'t a correct value';
 		}
-		if(!is_numeric($installments) && $installments > 0)) {
+		if(!is_numeric($installments) && ($installments > 0)) {
 			$messages [] = 'Number of installments amount isn\'t a correct value';
 		}
 		if(!is_numeric($loanrate) && $loanrate > 0) {
