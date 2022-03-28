@@ -2,6 +2,8 @@
 	require_once dirname(__FILE__).'/../config.php';
 	// include _ROOT_PATH.'/app/security/check.php';
 
+	require_once _ROOT_PATH.'/lib/Twig/Autoloader.php';
+
 	function getParams(&$amount, &$installments, &$loanrate, &$upfront) {
 		$amount = isset($_REQUEST['amount']) ? $_REQUEST['amount'] : null;
 		$installments = isset($_REQUEST['installments']) ? $_REQUEST['installments'] : null;
@@ -88,5 +90,30 @@
 		calculate($result, $messages, $amount, $installments, $loanrate, $upfront);
 	}
 
-	include 'loan_view.php';
+	// include 'loan_view.php';
+
+	Twig_Autoloader::register();
+	$loader = new Twig_Loader_Filesystem(_ROOT_PATH.'/templates');
+	$loader->addPath(_ROOT_PATH.'/app');
+	$twig = new Twig_Environment($loader, array(
+		'cache' => _ROOT_PATH.'/twig_cache',
+	));
+
+	$variables = array(
+		'app_url' => _APP_URL,
+		'root_path' => _ROOT_PATH,
+		'page_title' => 'Loan calculator',
+		'page_description' => 'Simple, fast, brutal',
+		'page_header' => 'Loan calculator using PHP and Twig',
+		'hide_intro' => false
+	);
+
+	if(isset($amount)) $variables['amount'] = $amount;
+	if(isset($installments)) $variables['installments'] = $installments;
+	if(isset($loanrate)) $variables['loanrate'] = $loanrate;
+	if(isset($upfront)) $variables['upfront'] = $upfront;
+	if(isset($result)) $variables['result'] = $result;
+	if(isset($messages)) $variables['messages'] = $messages;
+
+	echo $twig->render('loan.html', $variables);
 ?>
