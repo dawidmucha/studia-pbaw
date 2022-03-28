@@ -27,7 +27,7 @@
 			</label> <br />
 			<label>
 				Loan rate: <br />
-				<input type="text" id="loanrate" name="loanrate" value="<?php print($upfront); ?>" />
+				<input type="text" id="loanrate" name="loanrate" value="<?php print($loanrate); ?>" />
 			</label>% <br />
 			<label>
 				Upfront payment: <br />

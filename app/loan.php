@@ -45,7 +45,7 @@
 			if(!is_numeric($amount) && $amount > 0) {
 				$messages [] = 'Loan amount isn\'t a correct value';
 			}
-			if(!is_numeric($installments) && ($installments > 0)) {
+			if(!is_numeric($installments) && $installments > 0) {
 				$messages [] = 'Number of installments amount isn\'t a correct value';
 			}
 			if(!is_numeric($loanrate) && $loanrate > 0) {
@@ -55,15 +55,21 @@
 				$messages [] = 'Upfront payment amount isn\'t a correct value';
 			}
 		}
+
+		if(count($messages) != 0) return false;
+		else return true;
 	}
 
-	function calculate(&$result, &$amount, &$installments, &$loanrate, &$upfront) {
-		if(empty($messages)) {
-			$amount = intval($amount);
-			$installments = intval($installments);
-			$loanrate = intval($loanrate);
-			$upfront = intval($upfront);
-		
+	function calculate(&$result, &$messages, &$amount, &$installments, &$loanrate, &$upfront) {
+		global $role;
+		$amount = intval($amount);
+		$installments = intval($installments);
+		$loanrate = intval($loanrate);
+		$upfront = intval($upfront);
+
+		if($role == 'user' && $amount > 100000) {
+			$messages [] = 'Users cannot calculate loans above $100,000';
+		} else {
 			$result = (($amount-$upfront) * ((100 + $loanrate)/100))/$installments;
 		}
 	}
@@ -77,9 +83,9 @@
 	$result = null;
 	$messages = array();
 
-	getParams($amount, $installmennts, $loanrate, $upfront);
-	if(validate($messages, $amount, $installmennts, $loanrate, $upfront)) {
-		calculate($result, $amount, $installmennts, $loanrate, $upfront);
+	getParams($amount, $installments, $loanrate, $upfront);
+	if(validate($messages, $amount, $installments, $loanrate, $upfront)) {
+		calculate($result, $messages, $amount, $installments, $loanrate, $upfront);
 	}
 
 	include 'loan_view.php';
