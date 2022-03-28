@@ -20,133 +20,91 @@ class __TwigTemplate_085970cf07e71242d9c00cc47c4bcee7f6061112ef47a27ed731cfd8629
         // line 1
         echo "<!doctype html>
 <html lang=\"pl\">
-<head>
-    <meta charset=\"utf-8\">
-\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-\t<meta name=\"description\" content=\"";
+\t<head>
+\t\t<meta charset=\"utf-8\">
+\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+\t\t<meta name=\"description\" content=\"";
         // line 6
-        echo twig_escape_filter($this->env, ((array_key_exists("page_description", $context)) ? (_twig_default_filter((isset($context["page_description"]) ? $context["page_description"] : null), "Opis domyślny")) : ("Opis domyślny")), "html", null, true);
+        echo twig_escape_filter($this->env, ((array_key_exists("page_description", $context)) ? (_twig_default_filter((isset($context["page_description"]) ? $context["page_description"] : null), "Default description")) : ("Default description")), "html", null, true);
         echo "\">
 
-    <title>";
+\t\t<title>";
         // line 8
-        echo twig_escape_filter($this->env, ((array_key_exists("page_title", $context)) ? (_twig_default_filter((isset($context["page_title"]) ? $context["page_title"] : null), "Tytuł domyślny")) : ("Tytuł domyślny")), "html", null, true);
+        echo twig_escape_filter($this->env, ((array_key_exists("page_title", $context)) ? (_twig_default_filter((isset($context["page_title"]) ? $context["page_title"] : null), "Default Title")) : ("Default Title")), "html", null, true);
         echo "</title>
 
-\t<link rel=\"stylesheet\" href=\"http://yui.yahooapis.com/pure/0.4.2/pure.css\">
+\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
+\t</head>
 
-    <!--[if lte IE 8]>
-        <link rel=\"stylesheet\" href=\"{\$app_url}/css/main-grid-old-ie.css\">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel=\"stylesheet\" href=\"";
+\t<body>
+\t\t<div id=\"app_top\">
+\t\t<div>
+\t\t\t<a href=\"\">";
         // line 16
-        echo twig_escape_filter($this->env, (isset($context["app_url"]) ? $context["app_url"] : null), "html", null, true);
-        echo "/css/main-grid.css\">
-    <!--<![endif]-->
-  
-    <!--[if lte IE 8]>
-        <link rel=\"stylesheet\" href=\"{\$app_url}/css/layouts/marketing-old-ie.css\">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel=\"stylesheet\" href=\"";
-        // line 23
-        echo twig_escape_filter($this->env, (isset($context["app_url"]) ? $context["app_url"] : null), "html", null, true);
-        echo "/css/layouts/marketing.css\">
-    <!--<![endif]-->
-
-    <link rel=\"stylesheet\" href=\"";
-        // line 26
-        echo twig_escape_filter($this->env, (isset($context["app_url"]) ? $context["app_url"] : null), "html", null, true);
-        echo "/css/style.css\">";
-        // line 27
-        if ((isset($context["hide_intro"]) ? $context["hide_intro"] : null)) {
-            // line 28
-            echo "    <link rel=\"stylesheet\" href=\"";
-            echo twig_escape_filter($this->env, (isset($context["app_url"]) ? $context["app_url"] : null), "html", null, true);
-            echo "/css/style_hide_intro.css\">";
-        }
-        // line 30
-        echo "\t
-\t<link rel=\"stylesheet\" href=\"http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\">
-
-\t<script src=\"";
-        // line 33
-        echo twig_escape_filter($this->env, (isset($context["app_url"]) ? $context["app_url"] : null), "html", null, true);
-        echo "/js/jquery.min.js\"></script>
-\t<script src=\"";
-        // line 34
-        echo twig_escape_filter($this->env, (isset($context["app_url"]) ? $context["app_url"] : null), "html", null, true);
-        echo "/js/softscroll.js\"></script>
-
-</head>
-<body>
-
-<div id=\"app_top\" class=\"header\">
-    <div class=\"home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed\">
-        <a class=\"pure-menu-heading\" href=\"\">";
-        // line 41
-        echo twig_escape_filter($this->env, ((array_key_exists("page_title", $context)) ? (_twig_default_filter((isset($context["page_title"]) ? $context["page_title"] : null), "Tytuł domyślny")) : ("Tytuł domyślny")), "html", null, true);
+        echo twig_escape_filter($this->env, ((array_key_exists("page_title", $context)) ? (_twig_default_filter((isset($context["page_title"]) ? $context["page_title"] : null), "Default title")) : ("Default title")), "html", null, true);
         echo "</a>
-        <ul>
-            <li class=\"pure-menu-selected\"><a href=\"#app_top\">Góra strony</a></li>
-            <li><a href=\"#app_content\">Idź do formularza</a></li>
-        </ul>
-    </div>
-</div>
+\t\t\t<ul>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"#app_top\">Loan Calculator</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"#app_content\">Go to form</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t\t</div>
 
-<div class=\"splash-container\">
-    <div class=\"splash\">
-        <h1 class=\"splash-head\">";
-        // line 51
-        echo twig_escape_filter($this->env, ((array_key_exists("page_title", $context)) ? (_twig_default_filter((isset($context["page_title"]) ? $context["page_title"] : null), "Tytuł domyślny")) : ("Tytuł domyślny")), "html", null, true);
-        echo "</h1>
-        <p class=\"splash-subhead\">";
-        // line 53
-        echo twig_escape_filter($this->env, ((array_key_exists("page_description", $context)) ? (_twig_default_filter((isset($context["page_description"]) ? $context["page_description"] : null), "Opis domyślny")) : ("Opis domyślny")), "html", null, true);
+\t\t<div>
+\t\t\t<div>
+\t\t\t\t<h1>";
+        // line 31
+        echo twig_escape_filter($this->env, ((array_key_exists("page_title", $context)) ? (_twig_default_filter((isset($context["page_title"]) ? $context["page_title"] : null), "Loan calculator")) : ("Loan calculator")), "html", null, true);
         echo "
-        </p>
-        <p>
-            <a href=\"#app_content\" class=\"pure-button pure-button-primary\">Idź do formularza</a>
-        </p>
-    </div>
-</div>
+\t\t\t\t</h1>
 
-<div class=\"content-wrapper\">
+\t\t\t\t<p>";
+        // line 35
+        echo twig_escape_filter($this->env, ((array_key_exists("page_description", $context)) ? (_twig_default_filter((isset($context["page_description"]) ? $context["page_description"] : null), "Easy, simple, brutal")) : ("Easy, simple, brutal")), "html", null, true);
+        echo "
+\t\t\t\t</p>
 
-    <div id=\"app_content\" class=\"content\">";
-        // line 65
+\t\t\t\t<p>
+\t\t\t\t\t<a href=\"#app_content\">Go to the form</a>
+\t\t\t\t</p>
+\t\t\t</div>
+\t\t</div>
+
+\t\t<div>
+\t\t\t<div id=\"app_content\">";
+        // line 46
         $this->displayBlock('content', $context, $blocks);
-        // line 66
-        echo "
-    </div>
+        // line 47
+        echo "\t\t\t</div>
 
-    <div class=\"footer l-box is-center\">
-\t\t<p>";
-        // line 71
+\t\t\t<div>
+\t\t\t\t<p>";
+        // line 51
         $this->displayBlock('footer', $context, $blocks);
-        // line 72
-        echo "\t\t</p>
-        <p>Widok oparty na stylach i szablonie <a href=\"http://purecss.io/\" target=\"_blank\">Pure CSS Yahoo!</a>. (autor przykładu: Przemysław Kudłacik)</p>
-    </div>
+        // line 52
+        echo "\t\t\t\t</p>
+\t\t\t</div>
+\t\t</div>
 
-</div>
-
-
-</body>
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
+\t</body>
 </html>";
     }
 
-    // line 65
+    // line 46
     public function block_content($context, array $blocks = array())
     {
-        echo " Domyślna treść zawartości ....";
+        echo " Default content";
     }
 
-    // line 71
+    // line 51
     public function block_footer($context, array $blocks = array())
     {
-        echo " Domyślna treść stopki ....";
+        echo " Default footer";
     }
 
     public function getTemplateName()
@@ -161,86 +119,64 @@ class __TwigTemplate_085970cf07e71242d9c00cc47c4bcee7f6061112ef47a27ed731cfd8629
 
     public function getDebugInfo()
     {
-        return array (  147 => 71,  141 => 65,  129 => 72,  127 => 71,  121 => 66,  119 => 65,  106 => 53,  102 => 51,  89 => 41,  79 => 34,  75 => 33,  70 => 30,  65 => 28,  63 => 27,  60 => 26,  54 => 23,  44 => 16,  33 => 8,  28 => 6,  21 => 1,);
+        return array (  105 => 51,  99 => 46,  89 => 52,  87 => 51,  82 => 47,  80 => 46,  67 => 35,  61 => 31,  44 => 16,  33 => 8,  28 => 6,  21 => 1,);
     }
 }
 /* <!doctype html>*/
 /* <html lang="pl">*/
-/* <head>*/
-/*     <meta charset="utf-8">*/
-/* 	<meta name="viewport" content="width=device-width, initial-scale=1.0">*/
-/* 	<meta name="description" content="{{ page_description|default("Opis domyślny") }}">*/
+/* 	<head>*/
+/* 		<meta charset="utf-8">*/
+/* 		<meta name="viewport" content="width=device-width, initial-scale=1.0">*/
+/* 		<meta name="description" content="{{ page_description|default("Default description") }}">*/
 /* */
-/*     <title>{{ page_title|default("Tytuł domyślny") }}</title>*/
+/* 		<title>{{ page_title|default("Default Title") }}</title>*/
 /* */
-/* 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">*/
+/* 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">*/
+/* 	</head>*/
 /* */
-/*     <!--[if lte IE 8]>*/
-/*         <link rel="stylesheet" href="{$app_url}/css/main-grid-old-ie.css">*/
-/*     <![endif]-->*/
-/*     <!--[if gt IE 8]><!-->*/
-/*         <link rel="stylesheet" href="{{app_url}}/css/main-grid.css">*/
-/*     <!--<![endif]-->*/
-/*   */
-/*     <!--[if lte IE 8]>*/
-/*         <link rel="stylesheet" href="{$app_url}/css/layouts/marketing-old-ie.css">*/
-/*     <![endif]-->*/
-/*     <!--[if gt IE 8]><!-->*/
-/*         <link rel="stylesheet" href="{{app_url}}/css/layouts/marketing.css">*/
-/*     <!--<![endif]-->*/
+/* 	<body>*/
+/* 		<div id="app_top">*/
+/* 		<div>*/
+/* 			<a href="">{{ page_title|default("Default title") }}</a>*/
+/* 			<ul>*/
+/* 				<li>*/
+/* 					<a href="#app_top">Loan Calculator</a>*/
+/* 				</li>*/
+/* 				<li>*/
+/* 					<a href="#app_content">Go to form</a>*/
+/* 				</li>*/
+/* 			</ul>*/
+/* 		</div>*/
+/* 		</div>*/
 /* */
-/*     <link rel="stylesheet" href="{{app_url}}/css/style.css">*/
-/* {% if hide_intro %}*/
-/*     <link rel="stylesheet" href="{{app_url}}/css/style_hide_intro.css">*/
-/* {% endif %}*/
-/* 	*/
-/* 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">*/
+/* 		<div>*/
+/* 			<div>*/
+/* 				<h1>*/
+/* 					{{ page_title|default("Loan calculator") }}*/
+/* 				</h1>*/
 /* */
-/* 	<script src="{{app_url}}/js/jquery.min.js"></script>*/
-/* 	<script src="{{app_url}}/js/softscroll.js"></script>*/
+/* 				<p>*/
+/* 					{{ page_description|default("Easy, simple, brutal") }}*/
+/* 				</p>*/
 /* */
-/* </head>*/
-/* <body>*/
+/* 				<p>*/
+/* 					<a href="#app_content">Go to the form</a>*/
+/* 				</p>*/
+/* 			</div>*/
+/* 		</div>*/
 /* */
-/* <div id="app_top" class="header">*/
-/*     <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">*/
-/*         <a class="pure-menu-heading" href="">{{ page_title|default("Tytuł domyślny") }}</a>*/
-/*         <ul>*/
-/*             <li class="pure-menu-selected"><a href="#app_top">Góra strony</a></li>*/
-/*             <li><a href="#app_content">Idź do formularza</a></li>*/
-/*         </ul>*/
-/*     </div>*/
-/* </div>*/
+/* 		<div>*/
+/* 			<div id="app_content">*/
+/* 				{% block content %} Default content {% endblock %}*/
+/* 			</div>*/
 /* */
-/* <div class="splash-container">*/
-/*     <div class="splash">*/
-/*         <h1 class="splash-head">{{ page_title|default("Tytuł domyślny") }}</h1>*/
-/*         <p class="splash-subhead">*/
-/*              {{ page_description|default("Opis domyślny") }}*/
-/*         </p>*/
-/*         <p>*/
-/*             <a href="#app_content" class="pure-button pure-button-primary">Idź do formularza</a>*/
-/*         </p>*/
-/*     </div>*/
-/* </div>*/
+/* 			<div>*/
+/* 				<p>*/
+/* 					{% block footer %} Default footer {% endblock %}*/
+/* 				</p>*/
+/* 			</div>*/
+/* 		</div>*/
 /* */
-/* <div class="content-wrapper">*/
-/* */
-/*     <div id="app_content" class="content">*/
-/* */
-/* {% block content %} Domyślna treść zawartości .... {% endblock %}*/
-/* */
-/*     </div>*/
-/* */
-/*     <div class="footer l-box is-center">*/
-/* 		<p>*/
-/* {% block footer %} Domyślna treść stopki .... {% endblock %}*/
-/* 		</p>*/
-/*         <p>Widok oparty na stylach i szablonie <a href="http://purecss.io/" target="_blank">Pure CSS Yahoo!</a>. (autor przykładu: Przemysław Kudłacik)</p>*/
-/*     </div>*/
-/* */
-/* </div>*/
-/* */
-/* */
-/* </body>*/
+/* 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>*/
+/* 	</body>*/
 /* </html>*/

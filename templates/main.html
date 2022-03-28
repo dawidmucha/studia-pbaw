@@ -12,32 +12,37 @@
 
 	<body>
 		<div id="app_top">
-		<div>
-			<a href="">{{ page_title|default("Default title") }}</a>
-			<ul>
-				<li>
-					<a href="#app_top">Góra strony</a>
-				</li>
-				<li>
-					<a href="#app_content">Idź do formularza</a>
-				</li>
-			</ul>
+		<div class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand mx-3" href="">{{ page_title|default("Default title") }}</a>
+			<div class='collapse navbar-collapse' id='navbarNav'>
+				<ul class='navbar-nav mr-auto'>
+					<li class='nav-item'>
+						<a href="#app_top" class='nav-link'>Loan Calculator</a>
+					</li>
+					<li class='nav-item'>
+						<a href="#app_content" class='nav-link'>Go to form</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 		</div>
 
-		<div>
-			<div>
-				<h1>
-					{{ page_title|default("Loan calculator") }}
-				</h1>
-
-				<p>
-					{{ page_description|default("Easy, simple, brutal") }}
-				</p>
-
-				<p>
-					<a href="#app_content">Go to the form</a>
-				</p>
+		<div class="d-flex justify-content-center">
+			<div class="card m-5" style='width: 45rem;'>
+				<img class="card-img-top" src="https://media.istockphoto.com/photos/leaves-series-picture-id153265195?k=20&m=153265195&s=612x612&w=0&h=dVpFYbkXAlT_Q2A3xCvx5WwxMYDsEdma0uJVOn6qws8=" alt='leaf' />
+				<div class="card-body p-3">
+					<h1>
+						{{ page_title|default("Loan calculator") }}
+					</h1>
+	
+					<p>
+						{{ page_description|default("Easy, simple, brutal") }}
+					</p>
+	
+					<button type='button' class='btn btn-primary'>
+						<a style="color: white; text-decoration: none;" href="#app_content">Go to the form</a>
+					</button>
+				</div>
 			</div>
 		</div>
 

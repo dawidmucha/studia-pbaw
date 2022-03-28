@@ -123,8 +123,7 @@ class __TwigTemplate_0cdb1316bacc8c720aab49e9adbb0bbb66458a8d0df363fddcab7f9a6f5
 \t\t</h3>";
         }
         // line 66
-        echo "\t
-
+        echo "
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
 </div>";
     }
@@ -209,7 +208,6 @@ class __TwigTemplate_0cdb1316bacc8c720aab49e9adbb0bbb66458a8d0df363fddcab7f9a6f5
 /* 			</span>*/
 /* 		</h3>*/
 /* 	{% endif %}*/
-/* 	*/
 /* */
 /* 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>*/
 /* </div>*/

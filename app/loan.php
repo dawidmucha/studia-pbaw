@@ -96,7 +96,7 @@
 	$loader = new Twig_Loader_Filesystem(_ROOT_PATH.'/templates');
 	$loader->addPath(_ROOT_PATH.'/app');
 	$twig = new Twig_Environment($loader, array(
-		'cache' => _ROOT_PATH.'/twig_cache',
+		// 'cache' => _ROOT_PATH.'/twig_cache',
 	));
 
 	$variables = array(
@@ -105,7 +105,7 @@
 		'page_title' => 'Loan calculator',
 		'page_description' => 'Simple, fast, brutal',
 		'page_header' => 'Loan calculator using PHP and Twig',
-		'hide_intro' => false
+		'hide_intro' => true
 	);
 
 	if(isset($amount)) $variables['amount'] = $amount;
