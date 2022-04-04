@@ -10,7 +10,7 @@
 
 		<h1>Loan Calculator</h1>
 
-		<form class='d-flex flex-column align-items-strertch'>
+		<form class='d-flex flex-column align-items-strertch' action="{$conf->action_root}loanCompute" method="post">
 			<label class='pb-3'>
 				Loan amount: <br />
 				<input type="text" id="amount" name="amount" value="{$form->amount}" />
@@ -40,7 +40,7 @@
 			{if $msgs->isError()}
 				<h4>Errors:</h4>
 				<ol class="err">
-					{foreach $msg->getErrors() as $err}
+					{foreach $msgs->getErrors() as $err}
 						{strip}
 							<li>{$err}</li>
 						{/strip}
@@ -53,7 +53,7 @@
 			{if $msgs->isInfo()}
 				<h4>Errors:</h4>
 				<ol class="inf">
-					{foreach $msg->getInfos() as $err}
+					{foreach $msgs->getInfos() as $err}
 						{strip}
 							<li>{$err}</li>
 						{/strip}
