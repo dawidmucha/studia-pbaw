@@ -12,19 +12,23 @@
 
 	<body>
 		<div id="app_top">
-		<div class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand mx-3" href="">Loan Calculator</a>
-			<div class='collapse navbar-collapse' id='navbarNav'>
-				<ul class='navbar-nav mr-auto'>
-					<li class='nav-item'>
-						<a href="#app_top" class='nav-link'>Loan Calculator</a>
-					</li>
-					<li class='nav-item'>
-						<a href="#app_content" class='nav-link'>Go to form</a>
-					</li>
-				</ul>
+			<div class="navbar navbar-expand-lg navbar-light bg-light w-100 d-flex justify-content-center">
+				<a class="navbar-brand mx-3" href="">Loan Calculator</a>
+				<div>
+					<ul class='nav navbar-nav'>
+						<li class='nav-item'>
+							<a href="#app_content" class='nav-link'>Go to form</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class='nav navbar-nav'>
+						<li class='nav-item'>
+							<a href="{$conf->action_url}logout" class='nav-link'>Log out</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
 		</div>
 
 		<div>

@@ -2,69 +2,39 @@
 
 {block name=content} 
 	<div class='container d-flex flex-column align-items-center m-4'>
-		<!-- <div>
-			<a href="<?php print(_APP_ROOT); ?>/app/security/logout.php">
-				Log out
-			</a>
-		</div> -->
-
 		<h1>Loan Calculator</h1>
 
-		<form class='d-flex flex-column align-items-strertch' action="{$conf->action_root}loanCompute" method="post">
-			<label class='pb-3'>
+		<form class='d-flex flex-column' action="{$conf->action_root}loanCompute" method="post">
+			<label class='pb-3' class='form-group'>
 				Loan amount: <br />
-				<input type="text" id="amount" name="amount" value="{$form->amount}" />
+				<input type="text" id="amount" name="amount" value="{$form->amount}" class='form-control' />
 			</label> <br />
-			<label class='pb-3'>
+			<label class='pb-3' class='form-group'>
 				Number of installments <br />
-				<input type="text" id="installments" name="installments" value="{$form->installments}" />
+				<input type="text" id="installments" name="installments" value="{$form->installments}" class='form-control' />
 			</label> <br />
-			<label class='pb-3'>
+			<label class='pb-3' class='form-group'>
 				Loan rate: <br />
-				<div class='d-flex flex-row'>
-					<input type="text" id="loanrate" name="loanrate" value="{$form->loanrate}" />
-					<div>%</div>
+				<div class='d-flex flex-row align-items-center'>
+					<input type="text" id="loanrate" name="loanrate" value="{$form->loanrate}" class='form-control' />
+					<div style='font-size: 1.5rem'>%</div>
 				</div>
 			</label> <br />
-			<label class='pb-3'>
+			<label class='pb-3' class='form-group'>
 				Upfront payment: <br />
-				<input type="text" id="upfront" name="upfront" value="{$form->upfront}" />
+				<input type="text" id="upfront" name="upfront" value="{$form->upfront}" class='form-control' />
 			</label> <br />
 
-			<button type="submit" value="Calculate" class='btn btn-primary m-2 p-3'>
+			<button type="submit" value="Calculate" class='btn btn-primary m-4'>
 				Submit
 			</button>
 		</form>
 
-		<div>
-			{if $msgs->isError()}
-				<h4>Errors:</h4>
-				<ol class="err">
-					{foreach $msgs->getErrors() as $err}
-						{strip}
-							<li>{$err}</li>
-						{/strip}
-					{/foreach}
-				</ol>
-			{/if}
-		</div>
-
-		<div>
-			{if $msgs->isInfo()}
-				<h4>Errors:</h4>
-				<ol class="inf">
-					{foreach $msgs->getInfos() as $err}
-						{strip}
-							<li>{$err}</li>
-						{/strip}
-					{/foreach}
-				</ol>
-			{/if}
-		</div>
+		{include file='messages.tpl'}
 
 		{if isset($res->result)}
 			<h4>Payment:</h4>
-			<p class="res">{$res->result}</p>
+			<h1><span class="badge badge-secondary" style='background-color: lightgreen;'>{$res->result}</span></h1>
 		{/if}
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

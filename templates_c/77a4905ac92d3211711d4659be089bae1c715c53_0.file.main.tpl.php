@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-05 00:17:51
+/* Smarty version 4.1.0, created on 2022-04-10 18:55:53
   from 'C:\xampp\htdocs\studia-pbaw\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624b6e8f26cc74_13289199',
+  'unifunc' => 'content_62530c1934d047_92954599',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '77a4905ac92d3211711d4659be089bae1c715c53' => 
     array (
       0 => 'C:\\xampp\\htdocs\\studia-pbaw\\app\\views\\templates\\main.tpl',
-      1 => 1648572758,
+      1 => 1649272568,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_624b6e8f26cc74_13289199 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62530c1934d047_92954599 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -38,25 +38,30 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 
 	<body>
 		<div id="app_top">
-		<div class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand mx-3" href="">Loan Calculator</a>
-			<div class='collapse navbar-collapse' id='navbarNav'>
-				<ul class='navbar-nav mr-auto'>
-					<li class='nav-item'>
-						<a href="#app_top" class='nav-link'>Loan Calculator</a>
-					</li>
-					<li class='nav-item'>
-						<a href="#app_content" class='nav-link'>Go to form</a>
-					</li>
-				</ul>
+			<div class="navbar navbar-expand-lg navbar-light bg-light w-100 d-flex justify-content-center">
+				<a class="navbar-brand mx-3" href="">Loan Calculator</a>
+				<div>
+					<ul class='nav navbar-nav'>
+						<li class='nav-item'>
+							<a href="#app_content" class='nav-link'>Go to form</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class='nav navbar-nav'>
+						<li class='nav-item'>
+							<a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+logout" class='nav-link'>Log out</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
 		</div>
 
 		<div>
 			<div id="app_content">
 				<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2144876799624b6e8f26a4c2_71876529', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_33456200962530c19349eb3_25174154', 'content');
 ?>
 
 			</div>
@@ -64,7 +69,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2144876799624b6e8f
 			<div>
 				<p>
 					<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2134805075624b6e8f26bd19_64698619', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_43490700462530c1934be98_20321296', 'footer');
 ?>
 
 				</p>
@@ -77,12 +82,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2134805075624b6e8f
 	</body>
 </html><?php }
 /* {block 'content'} */
-class Block_2144876799624b6e8f26a4c2_71876529 extends Smarty_Internal_Block
+class Block_33456200962530c19349eb3_25174154 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_2144876799624b6e8f26a4c2_71876529',
+    0 => 'Block_33456200962530c19349eb3_25174154',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -92,12 +97,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'footer'} */
-class Block_2134805075624b6e8f26bd19_64698619 extends Smarty_Internal_Block
+class Block_43490700462530c1934be98_20321296 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_2134805075624b6e8f26bd19_64698619',
+    0 => 'Block_43490700462530c1934be98_20321296',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

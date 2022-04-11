@@ -81,7 +81,7 @@
 			getMessages()->addInfo('Calculations are done!');
 		}
 
-		public function process() {
+		public function action_loanCompute() {
 			$this->getParams();
 
 			if($this->validate()) {
@@ -91,10 +91,15 @@
 			$this->generateView();
 		}
 
+		public function action_loanShow() {
+			getMessages()->addInfo('Welcome to the loan calculator');
+			$this->generateView();
+		}
+
 		public function generateView() {
+			getSmart()->assign('user', unserialize($_SESSION['user']));
+
 			getSmarty()->assign('page_title', 'Loan Calculator');
-			getSmarty()->assign('page_description', 'Simple, fast, brutal');
-			getSmarty()->assign('page_header', 'Main controller');
 
 			getSmarty()->assign('form', $this->form);
 			getSmarty()->assign('res', $this->result);

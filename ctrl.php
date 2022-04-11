@@ -1,20 +1,13 @@
 <?php
 	require_once 'init.php';
 
-	switch($action) {
-		default:
-			include_once 'app/controllers/LoanCtrl.class.php';
+	getRouter()->setDefaultRoute('loanShow');
+	getRouter()->setLoginRoute('login');
 
-			$ctrl = new app\controllers\LoanCtrl();
-			$ctrl->generateView();
+	getRouter()->addRoute('loanShow', 'LoanCtrl', ['user','admin']);
+	getRouter()->addRoute('loanCompute', 'LoanCtrl', ['user', 'admin']);
+	getRouter()->addRoute('login', 'LoginCtrl');
+	getRouter()->addRoute('logout', 'LoginCtrl', ['user', 'admin']);
 
-			break;
-		case 'loanCompute':
-			include_once 'app/controllers/LoanCtrl.class.php';
-
-			$ctrl = new app\controllers\LoanCtrl();
-			$ctrl->process();
-
-			break;
-	}
+	getRouter()->go();
 ?>
