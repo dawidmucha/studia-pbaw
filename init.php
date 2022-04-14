@@ -50,7 +50,7 @@
 	require_once 'core/functions.php';
 
 	session_start();
-	$conf->roles = isset($_SESSION['roles']) ? unserialize($_SESSION['_roles']) : array();
+	$conf->roles = isset($_SESSION['_roles']) ? unserialize($_SESSION['_roles']) : array();
 
 	$router->setAction(getFromRequest('action'));
 ?>
