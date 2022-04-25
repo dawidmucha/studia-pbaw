@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-10 18:55:53
+/* Smarty version 4.1.0, created on 2022-04-20 14:28:09
   from 'C:\xampp\htdocs\studia-pbaw\app\views\templates\messages.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62530c19460e06_84670750',
+  'unifunc' => 'content_625ffc59a3f266_21347671',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62530c19460e06_84670750 (Smarty_Internal_Template $_smarty_tpl) {
+function content_625ffc59a3f266_21347671 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['msgs']->value->isError()) {?>
 	<div>
 		<h4>Errors:</h4>

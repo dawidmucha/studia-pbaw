@@ -37,6 +37,10 @@
 			</div>
 
 			<div>
+				{block name=database} Default database {/block}
+			</div>
+
+			<div>
 				<p>
 					{block name=footer} Default footer {/block}
 				</p>

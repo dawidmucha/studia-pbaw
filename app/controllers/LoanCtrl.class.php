@@ -97,7 +97,7 @@
 		}
 
 		public function generateView() {
-			getSmarty()->assign('user', unserialize($_SESSION['user']));
+			// getSmarty()->assign('user', unserialize($_SESSION['user']));
 
 			getSmarty()->assign('page_title', 'Loan Calculator');
 
