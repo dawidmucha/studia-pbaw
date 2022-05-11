@@ -41,50 +41,27 @@
 	</div>
 {/block}
 
-{block name=database}
-	{block name=top}
-		<div>
-			<form action="{$conf->action_url}personList">
-				<legend>Search options</legend>
-				<fieldset>
-					<input type='text' placeholder='surname' name='sf_surname' value="{$searchForm->surname}" /><br />
-					<button type='submit'>Filter</button>
-				</fieldset>
-			</form>
-		</div>
-	{/block}
-
-	{block name=bottom}
-		<div>
-			<a href="{$conf->action_url}personNew">New person</a>
-		</div>
-		<table id='tab_people'>
-			<thead>
+{block name='database'}
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>Amount</th>
+				<th>Number of installments</th>
+				<th>Loan Rate</th>
+				<th>Upfront payment</th>
+			</tr>
+		</thead>
+		<tbody>
+			{foreach $history as $p}{strip}
 				<tr>
-					<th>name</th>
-					<th>surname</th>
-					<th>date of birth</th>
-					<th>options</th>
+					<td>{$p["amount"]}</td>
+					<td>{$p["installments"]}</td>
+					<td>{$p["loanrate"]}</td>
+					<td>{$p["upfront"]}</td>
 				</tr>
-			</thead>
-			<tbody>
-				{foreach $people as $p}
-					{strip}
-						<tr>
-							<td>{$p["name"]}</td>
-							<td>{$p["surname"]}</td>
-							<td>{$p["birthdate"]}</td>
-							<td>
-								<a href="{$conf->action_url}personEdit&id={$p['idperson']}">Edit</a>
-								&nbsp;
-								<a href="{$conf->action_url}personDelete&id={$p['idperson']}">Delete</a>
-							</td>
-						</tr>
-					{/strip}
-				{/foreach}
-			</tbody>
-		</table>
-	{/block}
+			{/strip}{/foreach}
+		</tbody>
+	</table>
 {/block}
 
-{block name=footer} by Dawid Mucha {/block}
+{block name='footer'}by Dawid Mucha{/block}

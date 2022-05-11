@@ -3,10 +3,13 @@
 
 	use app\forms\LoanForm;
 	use app\transfer\LoanResult;
+	use DateTime;
+	use PDOException;
 
 	class LoanCtrl {
 		private $form;
 		private $result;
+		private $history;
 
 		public function __construct() {
 			$this->form = new LoanForm();
@@ -77,6 +80,13 @@
 					) / 100
 				)
 			) / $this->form->installments;
+
+			getDB()->insert("history", [
+				"amount" => $this->form->amount,
+				"installments" => $this->form->installments,
+				"loanrate" => $this->form->loanrate,
+				"upfront" => $this->form->upfront
+			]);
 			
 			getMessages()->addInfo('Calculations are done!');
 		}
@@ -103,6 +113,19 @@
 
 			getSmarty()->assign('form', $this->form);
 			getSmarty()->assign('res', $this->result);
+
+			try {
+				$this->history = getDB()->select("history", [
+					"amount",
+					"installments",
+					"loanrate",
+					"upfront"
+				], $where );
+			} catch(PDOException $e) {
+				getMessages()->addError('There\'s been a problem with fething data from the database');
+				if(getConf()->debug) getMessages()->addError($e->getMessage());
+			}
+			getSmarty()->assign('history', $this->history);
 
 			getSmarty()->display('LoanView.tpl');
 		}
